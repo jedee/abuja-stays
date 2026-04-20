@@ -1,0 +1,15 @@
+name: Fix Pages
+on: push
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions: pages: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git stash
+          git branch -D gh-pages 2>/dev/null || true
+          git checkout --orphan gh-pages
+          git reset --hard
+          git commit --allow-empty -m "init"
+          git push origin gh-pages --force
