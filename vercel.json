@@ -1,0 +1,17 @@
+# AbujaStays — Deployment Configuration
+
+{
+  "framework": "vite",
+  "buildCommand": "bun run build",
+  "devCommand": "bun dev",
+  "outputDirectory": "dist",
+  "installCommand": "bun install",
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
