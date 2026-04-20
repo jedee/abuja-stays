@@ -2,9 +2,9 @@
   "name": "zo-site",
   "type": "module",
   "scripts": {
-    "clear-cache": "rm -rf node_modules/.vite",
+    "clear-cache": "rm -rf .vite",
     "dev": "bun run clear-cache && NODE_ENV=development bun run --hot server.ts",
-    "build": "bun run clear-cache && vite build",
+    "build": "rm -rf .vite && bunx vite build",
     "prod": "bun run build && NODE_ENV=production bun run server.ts",
     "preview": "bun run vite preview"
   },
@@ -27,9 +27,9 @@
     "@radix-ui/react-tooltip": "^1.2.8",
     "@tabler/icons-react": "^3.35.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.17",
-    "@vitejs/plugin-react-swc": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.2",
     "@tanstack/react-table": "^8.21.3",
+    "@vitejs/plugin-react-swc": "^4.2.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "hono": "^4.10.6",
