@@ -1,0 +1,15 @@
+{
+  "name": "abuja-stays",
+  "local_port": 54040,
+  "entrypoint": "bun run dev",
+  "publish": {
+    "label": "abuja-stays",
+    "type": "http",
+    "entrypoint": "bun run prod",
+    "published_port": 52757,
+    "env": {
+      "NODE_ENV": "production",
+      "ZO_CLIENT_IDENTITY_TOKEN": "none"
+    }
+  }
+}
