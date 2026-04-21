@@ -35,4 +35,4 @@ git add -f dist/
 git commit -m "build: fixed asset paths"
 git push
 # Wait 60s then check https://jedee.github.io/abuja-stays/
-```
+```DEPLOY
